@@ -9,9 +9,9 @@ input.addEventListener("keypress", function(event) {
       // Cancel the default action, if needed
       event.preventDefault();
       calculateBMI();
- 
     }
   });
+
   function calculateBMI() {
   
     let name = document.querySelector("#name").value;
@@ -58,17 +58,17 @@ input.addEventListener("keypress", function(event) {
             pushObject(person);
 }
 
-function pushObject(person) {
-    // pushing the newly created object into the empty array 
-        people.push(person);
-        console.log(people);
-        clearForm();
-}
+        function pushObject(person) {
+            // pushing the newly created object into the empty array 
+                people.push(person);
+                console.log(people);
+                clearForm();
+        }
 
-function clearForm(){
-    document.querySelector("#name").value = "";
-    document.querySelector("#weight").value = "";
-    document.querySelector("#height").value = "";
-}
+        function clearForm(){
+            document.querySelector("#name").value = "";
+            document.querySelector("#weight").value = "";
+            document.querySelector("#height").value = "";
+        }
 
 
