@@ -5,19 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment one</title>
+    <style>
+        h1{
+            text-align: center;
+            font-size: 3rem;
+            color: #282828;
+            font-family: sans-serif;
+        }
+        #btn{
+            background-color: white;
+            border: none;
+            color: #282828;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 16px;
+            font-size: 1.3rem;   
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            width: 20rem;
+            height: auto;
+            font-size: 1.5rem;
+            background-color: lightblue;
+            padding: 10rem;
+            border-radius: 7px;
+            row-gap: .5rem;
+            margin: auto;
+            font-family: sans-serif;
+        }
+
+        input{
+        float: right;
+        border-radius: 10px;
+        border: none;
+        height: 2rem;
+        width: 10rem;
+        }
+
+        #result{
+            text-align: center;
+            color: black;
+            font-size: 1.5rem;
+        }
+
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>BMI Calculator</h1>
-  
-       <p>Nmae</p>
-       <input type="text" id="name">
 
-        <p>Height (in cm)</p>
+        <h1>BMI Calculator</h1>
+        <div class="container">
+       <label for = "name">Name
+       <input type="text" id="name">
+    </label>
+        <label for = "height">Height (in cm)
         <input type="number" id="height">
-  
-        <p>Weight (in kg)</p>
+    </label>
+        <label for="weight">Weight (in kg)
         <input type="number" id="weight">
+    </label>
   
         <button id="btn" onclick="calculateBMI();">Calculate</button>
   

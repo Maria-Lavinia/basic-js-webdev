@@ -1,7 +1,17 @@
 "use strict;"
 
 let people = [];
+let input = document.querySelector("#weight");
 
+input.addEventListener("keypress", function(event) {
+    // If the user presses the "Enter" key on the keyboard
+    if (event.key === "Enter") {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      calculateBMI();
+ 
+    }
+  });
   function calculateBMI() {
   
     let name = document.querySelector("#name").value;
@@ -45,10 +55,20 @@ let people = [];
             bmi: bmi,
             };
 
-    // pushing the newly created object into the empty array 
-        people.push(person);
+            pushObject(person);
 }
 
-console.log(people)
+function pushObject(person) {
+    // pushing the newly created object into the empty array 
+        people.push(person);
+        console.log(people);
+        clearForm();
+}
+
+function clearForm(){
+    document.querySelector("#name").value = "";
+    document.querySelector("#weight").value = "";
+    document.querySelector("#height").value = "";
+}
 
 
